@@ -12,5 +12,14 @@
   },
   "devDependencies": {
     "live-server": "^1.2.1"
-  }
+  },
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ascendDeveloper/javascript-profesional-Dev.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ascendDeveloper/javascript-profesional-Dev/issues"
+  },
+  "homepage": "https://github.com/ascendDeveloper/javascript-profesional-Dev#readme"
 }
