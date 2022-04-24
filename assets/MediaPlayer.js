@@ -7,8 +7,21 @@ function MediaPlayer(config) {
 
 
 MediaPlayer.prototype._initPlugins = function() {
-    this.plugins.forEach(plugins => {
-        plugins.run(this);
+    const player = {
+        play: () => this.play(),
+        pause: () => this.pause(),
+        media: this.media,
+        get muted() {
+            return this.media.muted;
+        },
+
+        set muted(value) {
+            this.media.muted = value;
+
+        },
+    };
+    this.plugins.forEach(plugin => {
+        plugin.run(player);
     });
 }
 
@@ -33,13 +46,7 @@ MediaPlayer.prototype.togglePlay = function() {
 
 
 MediaPlayer.prototype.mute = function() {
-    let audio = this.media.muted
     this.media.muted = true;
-    if (audio) {
-        this.media.muted = false
-    } else {
-        this.media.muted = true
-    }
 }
 
 
