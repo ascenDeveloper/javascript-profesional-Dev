@@ -46,12 +46,11 @@ MediaPlayer.prototype.togglePlay = function() {
 
 
 MediaPlayer.prototype.mute = function() {
-    this.media.muted = true;
-}
-
-
-MediaPlayer.prototype.unmute = function() {
-    this.media.unmute = false;
+    if (this.media.muted) {
+        this.media.muted = false;
+    } else {
+        this.media.muted = true
+    }
 }
 
 

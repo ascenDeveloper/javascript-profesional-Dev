@@ -12,10 +12,8 @@ button1.onclick = () => player.togglePlay();
 
 
 const button2 = document.querySelector('#mute');
-button2.onclick = () => {
-    if (player.media.muted) {
-        player.unmute();
-    } else {
-        player.mute();
-    }
-};
+button2.onclick = () => player.mute();
+
+if('serviceWorker' in navigator){
+    navigator.serviceWorker.register('/sw.js').catch(error => {console.log(error.message);})
+}
