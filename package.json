@@ -22,7 +22,7 @@
     "url": "https://github.com/ascendDeveloper/javascript-profesional-Dev/issues"
   },
   "homepage": "https://github.com/ascendDeveloper/javascript-profesional-Dev#readme",
-  "browserlist": [
+  "browserslist": [
     "last 1 Chrome version"
   ]
 }
