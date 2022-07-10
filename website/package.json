@@ -25,5 +25,8 @@
   "homepage": "https://github.com/ascendDeveloper/javascript-profesional-Dev#readme",
   "browserslist": [
     "last 1 Chrome version"
-  ]
+  ],
+  "dependencies": {
+    "adsmediaplayerlayer": "^1.0.0"
+  }
 }
