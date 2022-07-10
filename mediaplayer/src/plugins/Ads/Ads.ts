@@ -1,11 +1,11 @@
-interface Ad {
+export interface Ad {
     imageUrl: string;
     title: string;
     body: string;
-    url: string
-}
-
-const ALL_ADS: Ad[] = [
+    url: string;
+  }
+  
+  const ALL_ADS: Ad[] = [
     {
       imageUrl:
         'https://static.platzi.com/media/achievements/badge-profesional-javascript-13538df2-24ce-433f-9aa6-e34eed608e70.png',
@@ -79,31 +79,35 @@ const ALL_ADS: Ad[] = [
       url: 'https://platzi.com/cursos/react-router-redux/',
     },
   ];
-class Ads {
+  
+  class Ads {
     private static instance: Ads;
     private ads: Ad[];
-
+  
     private constructor() {
-        this.initAds();
+      this.initAds();
     }
-
+  
     static getInstance() {
-        if(!Ads.instance){
-            Ads.instance = new Ads();
-        }
-        return Ads.instance;
+      if (!Ads.instance) {
+        Ads.instance = new Ads();
+      }
+  
+      return Ads.instance;
     }
-
+  
     private initAds() {
-        this.ads = [...ALL_ADS]
+      this.ads = [...ALL_ADS];
     }
-
+  
     getAd() {
-        if(this.ads.length === 0) {
-            this.initAds();
-        }
-        return this.ads.pop();
+      if (this.ads.length === 0) {
+        this.initAds();
+      }
+  
+      return this.ads.pop();
     }
-}
-
-export default Ads;
+  }
+  
+  export default Ads;
+  
